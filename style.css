@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    width: 33.3%;
+    padding: 0 15px;
+}
+
+.col-3 {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.header-list li {
+    list-style: none;
+}
+
+.header-list a {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-decoration: none;
+    color: #703412;
+}
+
+.header {
+    background: #FEFBF1;
+    padding: 20px 0;
+}
+.burger-btn{
+    display: none;
+}
+
+main {
+    background: #FEFBF1;
+}
+
+.first {
+    padding: 120px 0;
+}
+
+.first-subtitle {
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: 1.6px;
+    color: #703412;
+    text-transform: uppercase;
+}
+
+.first-title {
+    font-family: Roboto;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 88px;
+    text-align: left;
+    color: #703412;
+}
+
+.first-text {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 41.6px;
+    text-align: left;
+    color: #703412;
+    width: 500px;
+    margin-top: 120px;
+}
+
+.blog-card-img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+.blog-card-title {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: #703412;
+    margin-top: 32px;
+}
+
+.blog-card-text {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1.6px;
+    color: rgba(112, 52, 18, 0.72);
+    margin-top: 10px;
+}
+
+.blog-card {
+    margin-bottom: 60px;
+}
+
+.footer {
+    background: #084935;
+    padding: 100px 0;
+    color: white;
+}
+
+.footer-title {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1.6px;
+}
+
+.footer-text {
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38.4px;
+    margin-top: 24px;
+    margin-bottom: 110px;
+}
+
+.footer-link {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.72);
+    display: block;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .first-title {
+        font-size: 54px;
+        line-height: 110%;
+    }
+
+    .first-text {
+        font-size: 28px;
+        margin-top: 80px;
+        width: 80%;
+    }
+    .first{
+        padding: 80px 0;
+    }
+    .col-4{
+        width: 50%;
+    }
+    .col-3{
+        width: 50%;
+    }
+    .row{
+        row-gap: 15px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .col-4{
+        width: 100%;
+    }
+    .col-3{
+        width: 100%;
+    }
+    .first-title {
+        font-size: 38px;
+    }
+    .first-text {
+        font-size: 21px;
+        margin-top: 44px;
+    }
+    .first {
+        padding: 40px 0;
+    }
+
+    .header{
+        position: relative;
+    }
+    .header::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: inherit;
+        z-index: 5;
+        top: 0;
+        left: 0;
+    }
+    .burger-btn{
+        display: flex;
+        position: relative;
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        margin-left: 5px;
+        align-items: center;
+    }
+    .burger-btn span,
+    .burger-btn span::before,
+    .burger-btn span::after{
+        content: '';
+        height: 5px;
+        width: 100%;
+        background-color: #703412;
+        position: relative;
+    }
+    .burger-btn span::before{
+        position: absolute;
+        top: -10px;
+    }
+    .burger-btn span::after{
+        position: absolute;
+        bottom: -10px;
+    }
+    .header-list{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transition: .5s;
+    }
+    .header-list-show{
+        top: 95px;
+    }
+
+}
